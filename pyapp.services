@@ -1,0 +1,13 @@
+[Unit]
+Description=Python Application
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/Expr7/app.py
+Restart=on-failure
+RestartSec=5
+User=vagrant
+
+[Install]
+WantedBy=multi-user.target
